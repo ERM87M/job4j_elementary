@@ -9,7 +9,6 @@ public class RectangleArea {
     }
 
     public static void main(String[] args) {
-        double result = RectangleArea.square(6, 2);
-        System.out.println(" p = 6, k = 2, s = 2, real = " + result);
+        System.out.println(RectangleArea.square(6, 2));
     }
 }
