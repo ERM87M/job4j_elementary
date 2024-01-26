@@ -2,6 +2,7 @@ package ru.job4j.converter;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.*;
 
 class ConverterTestTest {
@@ -16,11 +17,11 @@ class ConverterTestTest {
     }
 
     @Test
-    void whenConvert200RblThen3dot333Dollar() {
+    void whenConvert200RblThen3dot3333Dollar() {
         float inputTwo = 200;
-        float expectedTwo = 3;
+        float expectedTwo = 3.3333f;
         float valueTwo = 0.0001f;
-        float outputTwo = (int) ConverterTest.rubleToDollar(inputTwo);
+        float outputTwo = ConverterTest.rubleToDollar(inputTwo);
         Assertions.assertThat(outputTwo).isEqualTo(expectedTwo, withPrecision(valueTwo));
     }
 
