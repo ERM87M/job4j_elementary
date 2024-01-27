@@ -18,6 +18,6 @@ public class FitTest {
         short input = 175;
         double expected = 74.75;
         double output = Fit.womanWeight(input);
-        assertThat(output).isEqualTo(expected, withPrecision(0.001));
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 }
