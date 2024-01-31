@@ -15,7 +15,7 @@ public class ReactangleAreaTest {
     }
 
     @Test
-    void whenP8K2SquareDot355() {
+    void whenP8K2Square3Dot55() {
         int p = 8;
         double k = 2;
         double expected = 3.55;
