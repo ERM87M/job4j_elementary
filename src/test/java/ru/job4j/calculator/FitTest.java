@@ -6,7 +6,7 @@ import static org.assertj.core.api.Assertions.*;
 
 public class FitTest {
     @Test
-    void whenMan187Then100Dot10005() {
+    void whenMan187Then100Dot05() {
         short input = 187;
         double expected = 100.05;
         double output = Fit.manWeight(input);
@@ -14,7 +14,7 @@ public class FitTest {
     }
 
     @Test
-    void whenWoman175Then74Dot7475() {
+    void whenWoman175Then74Dot75() {
         short input = 175;
         double expected = 74.75;
         double output = Fit.womanWeight(input);
