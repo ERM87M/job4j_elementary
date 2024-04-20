@@ -1,4 +1,8 @@
 package ru.job4j.array;
+/*
+6.0.4. Массивы и цикл for. [#226665 #492243]
+6.0.5. Массивы и цикл for-each [#333581]
+ */
 
 public class ArrayLoop {
     public static void main(String[] args) {
