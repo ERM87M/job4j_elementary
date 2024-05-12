@@ -30,7 +30,7 @@ public class SwitchArrayTest {
     }
 
     @Test
-    void whenSwapBorderArrayLengthIs1() {
+    void whenSwapBorderArrayLengthIs2() {
         int[] input = {1, 2};
         int[] result = SwitchArray.swapBorder(input);
         int[] expected = {2, 1};
