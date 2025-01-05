@@ -4,48 +4,32 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class PointTest {
+class PointTest {
+
     @Test
-    void when00to20then2() {
-        int x1 = 0;
-        int y1 = 0;
-        int x2 = 2;
-        int y2 = 0;
+    void whenThis00That20Then2() {
+        Point x = new Point(0, 0);
+        Point y = new Point(2, 0);
         double expected = 2;
-        double output = Point.distance(x1, y1, x2, y2);
+        double output = x.distance(y);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
-    void when00to40then4Dot40() {
-        int x1 = 2;
-        int y1 = 4;
-        int x2 = 2;
-        int y2 = 8;
-        double expected = 4.0;
-        double output = Point.distance(x1, y1, x2, y2);
+    void whenThis54That12Then4Dot47() {
+        Point x = new Point(5, 4);
+        Point y = new Point(1, 2);
+        double expected = 4.47;
+        double output = x.distance(y);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
-    void  when00to223then2Dot23() {
-        int x1 = 3;
-        int y1 = 2;
-        int x2 = 2;
-        int y2 = 4;
-        double expected = 2.23;
-        double output = Point.distance(x1, y1, x2, y2);
-        assertThat(output).isEqualTo(expected, withPrecision(0.01));
-    }
-
-    @Test
-    void when00to1then1() {
-        int x1 = 0;
-        int y1 = 0;
-        int x2 = 1;
-        int y2 = 0;
-        double expected = 1;
-        double output = Point.distance(x1, y1, x2, y2);
+    void whenThis44That2Minus2Then6Dot32() {
+        Point x = new Point(4, 4);
+        Point y = new Point(2, -2);
+        double expected = 6.32;
+        double output = x.distance(y);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 }
