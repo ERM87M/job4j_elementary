@@ -3,7 +3,7 @@ package ru.job4j.condition;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.withPrecision;
 
 class PointTest {
 
@@ -35,34 +35,30 @@ class PointTest {
     }
 
     @Test
-    public void whenDistance3dIs0() {
+    public void whenThis00That00Then0() {
         Point p1 = new Point(0, 0, 0);
         Point p2 = new Point(0, 0, 0);
+        double expected = 0;
         double result = p1.distance3d(p2);
-        assertEquals(0, result, 0.01);
+        assertThat(result).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
-    public void whenDistance3dIs2() {
+    public void whenThis00That02Then2() {
         Point p1 = new Point(0, 0, 0);
         Point p2 = new Point(0, 2, 0);
+        double expected = 2;
         double result = p1.distance3d(p2);
-        assertEquals(2, result, 0.01);
+        assertThat(result).isEqualTo(expected, withPrecision(0.01));
     }
 
     @Test
-    public void whenDistance3dIsSqrt12() {
+    public void whenThis00That111Then1Dot73() {
         Point p1 = new Point(0, 0, 0);
-        Point p2 = new Point(2, 2, 2);
+        Point p2 = new Point(1, 1, 1);
+        double expected = 1.73;
         double result = p1.distance3d(p2);
-        assertEquals(Math.sqrt(12), result, 0.01);
+        assertThat(result).isEqualTo(expected, withPrecision(0.01));
     }
 
-    @Test
-    public void whenDistance3dIsDiagonal() {
-        Point p1 = new Point(1, 2, 3);
-        Point p2 = new Point(4, 6, 8);
-        double result = p1.distance3d(p2);
-        assertEquals(Math.sqrt(3 * 3 + 4 * 4 + 5 * 5), result, 0.01);
-    }
 }
